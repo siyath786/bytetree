@@ -1,0 +1,433 @@
+/* Footer Section */
+.main-footer {
+    background: linear-gradient(135deg, #0c1524 0%, #151f2e 100%);
+    color: white;
+    padding: 60px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(78, 181, 200, 0.3), transparent);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 50px;
+}
+
+/* Brand Column with Logo - ALL CONTENT CENTERED */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+    text-align: center; /* Center text */
+    justify-content: flex-start; /* Align items to top */
+}
+
+.footer-logo-container {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+}
+
+.footer-logo-img {
+    height: 70px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Makes logo white */
+}
+
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    text-align: center; /* Center text */
+    width: 100%; /* Take full width */
+}
+
+.company-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0; /* Reduced bottom margin */
+    letter-spacing: -0.5px;
+    width: 100%; /* Full width for centering */
+}
+
+.logo-dot {
+    color: #4eb5c8;
+}
+
+.footer-subtext {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 250px;
+    width: 100%; /* Full width for centering */
+}
+
+/* Links Column */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column-title {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #4eb5c8;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-link:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #4eb5c8;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* Contact Column */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-icon {
+    width: 18px;
+    height: 18px;
+    color: #4eb5c8;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.contact-item p {
+    color: #cbd5e1;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Partnership Column - UPDATED */
+.footer-partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.partner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.partner-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.partner-logo {
+    height: 50px; /* Changed from 40px to 50px */
+    width: auto;
+    max-width: 180px; /* Increased from 150px */
+    filter: brightness(0) invert(1);
+    margin: 5px 0;
+}
+
+.partner-name {
+    display: block;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+}
+
+.partner-text {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 25px 0;
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin-bottom: 20px;
+}
+
+.copyright {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+b{
+    color:rgb(205, 205, 206);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+        text-align: left; /* Text left-aligned on tablet */
+        justify-content: center; /* Center the entire row */
+    }
+    
+    .footer-logo-container {
+        margin-bottom: 0;
+        justify-content: center; /* Keep centered */
+        width: auto; /* Auto width for logo container */
+        flex-shrink: 0; /* Prevent logo from shrinking */
+    }
+    
+    .footer-brand-text {
+        align-items: flex-start; /* Text left-aligned */
+        text-align: left; /* Text left-aligned */
+        width: auto; /* Auto width for text container */
+        flex: 1; /* Take remaining space */
+    }
+    
+    .company-name,
+    .footer-subtext {
+        text-align: left; /* Text left-aligned on tablet */
+        width: 100%; /* Still full width within container */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        padding: 40px 0 0;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-brand {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 15px; /* Reduced gap for mobile */
+        justify-content: center;
+    }
+    
+    .footer-logo-container {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px; /* Reduced margin */
+    }
+    
+    .footer-brand-text {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .footer-logo-img {
+        height: 60px;
+    }
+    
+    .company-name {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 5px; /* Reduced margin */
+    }
+    
+    .footer-subtext {
+        text-align: center;
+        max-width: 300px;
+        margin: 0 auto;
+        font-size: 0.9rem;
+    }
+    
+    .footer-column-title {
+        text-align: center;
+    }
+    
+    .footer-column-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-menu {
+        align-items: center;
+    }
+    
+    .contact-info {
+        align-items: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .partner-content {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .partner-logo {
+        height: 35px; /* ← Update this too */
+        max-width: 130px; /* ← And this */
+    }
+    
+    .partner-text {
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer {
+        padding: 30px 0 0;
+    }
+    
+    .footer-container {
+        padding: 0 15px;
+        gap: 30px;
+    }
+    
+    .footer-logo-img {
+        height: 50px;
+    }
+    
+    .company-name {
+        font-size: 1.4rem;
+    }
+    
+    .footer-subtext {
+        font-size: 0.9rem;
+    }
+    
+    .footer-column-title {
+        font-size: 1rem;
+    }
+    
+    .partner-logo {
+        height: 30px; /* ← Update this too */
+        max-width: 110px; /* ← And this */
+    }
+    
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+/* Adjust logo color if needed - remove if you want original logo colors */
+@media (prefers-color-scheme: dark) {
+    .footer-logo-img {
+        filter: none; /* Remove filter to show original logo colors */
+    }
+    
+    .partner-logo {
+        filter: none; /* Remove filter to show original logo colors */
+    }
+}
+
+/* Alternative: If you want to keep original logo colors */
+.footer-logo-img.no-filter,
+.partner-logo.no-filter {
+    filter: none !important;
+}

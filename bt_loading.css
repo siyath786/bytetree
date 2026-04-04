@@ -1,0 +1,160 @@
+/* Playful Loading Animation */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4eb5c8 0%, #36d3f4 50%, #f26f18 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.byte-tree-loader {
+    text-align: center;
+    color: white;
+}
+
+/* Growing Tree Animation */
+.tree-container {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    margin: 0 auto 40px;
+}
+
+.tree-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 0;
+    background: #8B4513;
+    border-radius: 6px;
+    animation: growTrunk 1.5s ease-out forwards;
+}
+
+.tree-branch {
+    position: absolute;
+    background: #2E8B57;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.branch-1 {
+    width: 40px;
+    height: 8px;
+    bottom: 40px;
+    left: 20px;
+    animation: growBranch1 1s ease-out 0.8s forwards;
+}
+
+.branch-2 {
+    width: 35px;
+    height: 8px;
+    bottom: 60px;
+    right: 15px;
+    animation: growBranch2 1s ease-out 1s forwards;
+}
+
+.branch-3 {
+    width: 45px;
+    height: 8px;
+    bottom: 80px;
+    left: 15px;
+    animation: growBranch3 1s ease-out 1.2s forwards;
+}
+
+.tree-top {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    background: #228B22;
+    border-radius: 50%;
+    animation: growTop 1s ease-out 1.5s forwards;
+}
+
+/* Bouncing Bytes */
+.bytes-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.byte-byte {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    animation: bounceByte 0.6s ease-in-out infinite alternate;
+}
+
+.byte-byte:nth-child(1) { animation-delay: 0.1s; animation-fill-mode: forwards; }
+.byte-byte:nth-child(2) { animation-delay: 0.2s; animation-fill-mode: forwards; }
+.byte-byte:nth-child(3) { animation-delay: 0.3s; animation-fill-mode: forwards; }
+.byte-byte:nth-child(4) { animation-delay: 0.4s; animation-fill-mode: forwards; }
+
+.loading-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    animation: pulseText 1.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes growTrunk {
+    0% { height: 0; }
+    100% { height: 80px; }
+}
+
+@keyframes growBranch1 {
+    0% { opacity: 0; transform: scaleX(0); }
+    100% { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes growBranch2 {
+    0% { opacity: 0; transform: scaleX(0); }
+    100% { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes growBranch3 {
+    0% { opacity: 0; transform: scaleX(0); }
+    100% { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes growTop {
+    0% { width: 0; height: 0; opacity: 0; }
+    100% { width: 50px; height: 50px; opacity: 1; }
+}
+
+@keyframes bounceByte {
+    0% { 
+        opacity: 0;
+        transform: translateY(0) scale(0.8);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(-15px) scale(1.1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes pulseText {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}

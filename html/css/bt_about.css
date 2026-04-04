@@ -1,0 +1,109 @@
+/* About Section Styles */
+.about-section {
+    background-color: white;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #4eb5c8;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight {
+    color: #f26f18;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #4eb5c8;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), 
+                opacity 0.8s ease;
+}
+
+.about-img.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+                opacity 0.6s ease;
+    transition-delay: 0.2s;
+}
+
+.about-text.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 20px;
+    }
+    
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .about-content {
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    .about-img {
+        max-width: 200px;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+}

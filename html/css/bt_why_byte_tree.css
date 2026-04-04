@@ -1,0 +1,255 @@
+/* Why Choose Byte Tree - Light Theme */
+.why-byte-tree-light {
+    padding: 60px 20px;
+    background: url('https://i.ibb.co/tpTmR4yC/Black-Doodle-Group-Project-Presentation.png');
+    position: relative;
+    overflow: hidden;
+}
+
+.why-byte-tree-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-byte-tree-header {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color:#00b7ca;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight {
+    color: #f26f18;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #4eb5c8;
+}
+
+.why-byte-tree-subtitle {
+    font-size: 1.3rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Mascot with Points Container */
+.mascot-with-points {
+    position: relative;
+    width: 900px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+/* Center Mascot */
+.mascot-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.mascot-img {
+    width: 350px;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Feature Points */
+.feature-point {
+    position: absolute;
+    width: 220px;
+    text-align: center;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    color: #64748b; /* Dull gray initially */
+    margin-bottom: 10px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.feature-point:hover .feature-title {
+    color: #4eb5c8; /* Blue color on hover */
+}
+
+.feature-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #f26f18;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-point:hover .feature-title::after {
+    opacity: 1;
+}
+
+.important-word {
+    color: #64748b; /* Dull gray initially */
+    transition: color 0.3s ease;
+}
+
+.feature-point:hover .important-word {
+    color: #f26f18; /* Orange on hover */
+}
+
+.feature-desc {
+    font-size: 1rem;
+    color: #94a3b8; /* Lighter dull gray initially */
+    line-height: 1.5;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.feature-point:hover .feature-desc {
+    color: #64748b; /* Slightly darker on hover */
+}
+
+.feature-desc strong {
+    color: #94a3b8; /* Lighter dull gray initially */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.feature-point:hover .feature-desc strong {
+    color: #f26f18; /* Orange on hover */
+}
+
+/* Positioning Points Around the Mascot */
+.point-tl {
+    top: 20%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.point-tr {
+    top: 20%;
+    right: 15%;
+    transform: translate(50%, -50%);
+}
+
+.point-bl {
+    bottom: 20%;
+    left: 15%;
+    transform: translate(-50%, 50%);
+}
+
+.point-br {
+    bottom: 20%;
+    right: 15%;
+    transform: translate(50%, 50%);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .mascot-with-points {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        gap: 30px;
+        justify-items: center;
+    }
+    
+    .feature-point {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 300px;
+        max-width: 100%;
+    }
+    
+    .mascot-center {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        order: 3;
+        grid-row: 3;
+    }
+    
+    .mascot-img {
+        width: 250px;
+    }
+    
+    .point-tl { order: 1; grid-row: 1; }
+    .point-tr { order: 2; grid-row: 2; }
+    .point-bl { order: 4; grid-row: 4; }
+    .point-br { order: 5; grid-row: 5; }
+}
+
+@media (max-width: 768px) {
+    .why-byte-tree-light {
+        padding: 40px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .why-byte-tree-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .feature-point {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .mascot-img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-byte-tree-light {
+        padding: 30px 15px;
+    }
+    
+    .mascot-img {
+        width: 180px;
+    }
+    
+    .feature-title {
+        font-size: 1.2rem;
+    }
+    
+    .feature-desc {
+        font-size: 0.95rem;
+    }
+}
